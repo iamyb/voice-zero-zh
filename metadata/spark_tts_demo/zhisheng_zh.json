@@ -1,0 +1,17 @@
+{
+  "id": "zhisheng_zh",
+  "source": "spark_tts_demo",
+  "gender": "M",
+  "language": "zh-CN",
+  "duration_seconds": 11.54,
+  "sample_rate": 16000,
+  "origin": {
+    "dataset": "Spark-TTS official demo (SparkAudio/Spark-TTS)",
+    "url": "https://raw.githubusercontent.com/SparkAudio/Spark-TTS/main/src/demos/%E5%BE%90%E5%BF%97%E8%83%9C/zhisheng_zh.wav",
+    "fetched_at": "2026-10-12"
+  },
+  "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+  "license": "See Spark-TTS repo LICENSE",
+  "label": "徐志胜",
+  "note": "Official zero-shot TTS demos. Several are celebrity voices (马云/刘德华/杨澜/鲁豫) — review voice-rights before redistribution."
+}

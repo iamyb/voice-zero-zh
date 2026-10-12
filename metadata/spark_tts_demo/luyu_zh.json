@@ -1,0 +1,17 @@
+{
+  "id": "luyu_zh",
+  "source": "spark_tts_demo",
+  "gender": "F",
+  "language": "zh-CN",
+  "duration_seconds": 15.98,
+  "sample_rate": 16000,
+  "origin": {
+    "dataset": "Spark-TTS official demo (SparkAudio/Spark-TTS)",
+    "url": "https://raw.githubusercontent.com/SparkAudio/Spark-TTS/main/src/demos/%E9%B2%81%E8%B1%AB/luyu_zh.wav",
+    "fetched_at": "2026-10-12"
+  },
+  "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+  "license": "See Spark-TTS repo LICENSE",
+  "label": "鲁豫",
+  "note": "Official zero-shot TTS demos. Several are celebrity voices (马云/刘德华/杨澜/鲁豫) — review voice-rights before redistribution."
+}

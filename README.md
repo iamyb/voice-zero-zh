@@ -8,9 +8,15 @@
 
 ## 当前样本
 
-- **aishell1**：30 个参考音频（20 位男性 S0002–S0021 + 10 位女性 S0124–S0133）。
-- **indextts_demo**：IndexTTS 官方 demo 音频（待抓取）。
+| 来源 | 数量 | 说明 |
+|---|---|---|
+| **aishell1** | 30 | AISHELL-1（20 男 S0002–S0021 + 10 女 S0124–S0133），录音棚级，Apache-2.0 |
+| **indextts_demo** | 13 | IndexTTS 官方 demo 片段 |
+| **spark_tts_demo** | 8 | Spark-TTS 官方 demo（含名人/角色音色） |
+| **f5_tts_demo** | 1 | F5-TTS 官方中文参考 |
+
 - 完整 AISHELL-1 数据集共 119 位说话人，可用 `--all-missing` 一键补齐。
+- ⚠️ 部分 demo（尤其 Spark-TTS 的名人音色）涉及真实人物声音，公开分发前请自行评估声音权益。
 
 ## 数据源
 
@@ -35,17 +41,21 @@ AISHELL-1 本身是录音棚干声（无混响、无背景音乐、无噪声）�
 voices/
   aishell1/        # AISHELL-1 清洗后的参考音频（16 kHz mono wav）
   indextts_demo/   # IndexTTS 官方 demo 音频
+  spark_tts_demo/  # Spark-TTS 官方 demo
+  f5_tts_demo/     # F5-TTS 官方 demo
   <source>/        # 其他来源…
 metadata/
   index.json       # 全部样本的聚合索引（跨所有来源）
   aishell1/
     Sxxxx.json     # 单个样本的溯源信息
     speaker.info   # 官方说话人信息（ID + 性别）
-  indextts_demo/
-    demo_xx.json   # 单个样本的溯源信息
+  <source>/
+    <id>.json      # 单个样本的溯源信息
 scripts/
   build_voices.py        # AISHELL-1 构建脚本（下载 → 挑选 → 清洗 → 元数据）
-  fetch_indextts_demo.py # 抓取 IndexTTS 官方 demo
+  fetch_demos.py         # 通用 TTS demo 抓取（由 demo_sources.json 驱动）
+  demo_sources.json      # demo 来源清单（加新来源只改这里）
+  fetch_indextts_demo.py # IndexTTS demo 抓取（早期专用脚本）
   reindex.py             # 重建 metadata/index.json
 ```
 
@@ -78,12 +88,34 @@ python3 scripts/build_voices.py S0022 S0023 S0024
 # 构建 speaker.info 中所有尚未构建的说话人（共 119 位）
 python3 scripts/build_voices.py --all-missing
 
-# 抓取 IndexTTS 官方 demo 音频
-python3 scripts/fetch_indextts_demo.py
+# 抓取所有 TTS demo（由 demo_sources.json 驱动）
+python3 scripts/fetch_demos.py
+
+# 只抓取某个来源
+python3 scripts/fetch_demos.py spark_tts_demo
 
 # 仅重建 index.json
 python3 scripts/reindex.py
 ```
+
+### 添加新的 demo 来源
+
+编辑 `scripts/demo_sources.json`，加一个条目即可（路径支持中文，脚本会自动 URL 编码）：
+
+```json
+{
+  "source": "my_tts_demo",
+  "base": "https://raw.githubusercontent.com/owner/repo/main",
+  "dataset": "MyTTS official demo (owner/repo)",
+  "license": "See repo LICENSE",
+  "default_language": "zh-CN",
+  "files": {
+    "sample_1": {"path": "asset/sample_1.wav", "gender": "F", "label": "示例音色"}
+  }
+}
+```
+
+然后运行 `python3 scripts/fetch_demos.py my_tts_demo`。
 
 依赖：`curl`、`tar`、`ffmpeg`（含 ffprobe）、Python 3.8+（仅标准库）。
 

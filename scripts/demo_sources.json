@@ -1,0 +1,30 @@
+[
+  {
+    "source": "spark_tts_demo",
+    "base": "https://raw.githubusercontent.com/SparkAudio/Spark-TTS/main",
+    "dataset": "Spark-TTS official demo (SparkAudio/Spark-TTS)",
+    "license": "See Spark-TTS repo LICENSE",
+    "note": "Official zero-shot TTS demos. Several are celebrity voices (马云/刘德华/杨澜/鲁豫) — review voice-rights before redistribution.",
+    "default_language": "zh-CN",
+    "files": {
+      "yuchengdong_zh": {"path": "src/demos/余承东/yuchengdong_zh.wav", "gender": "M", "label": "余承东"},
+      "dehua_zh":      {"path": "src/demos/刘德华/dehua_zh.wav",      "gender": "M", "label": "刘德华"},
+      "nezha_zh":      {"path": "src/demos/哪吒/nezha_zh.wav",        "gender": "M", "label": "哪吒"},
+      "zhisheng_zh":   {"path": "src/demos/徐志胜/zhisheng_zh.wav",   "gender": "M", "label": "徐志胜"},
+      "lijing_zh":     {"path": "src/demos/李靖/lijing_zh.wav",       "gender": "M", "label": "李靖"},
+      "yanglan_zh":    {"path": "src/demos/杨澜/yanglan_zh.wav",      "gender": "F", "label": "杨澜"},
+      "mayun_zh":      {"path": "src/demos/马云/mayun_zh.wav",        "gender": "M", "label": "马云"},
+      "luyu_zh":       {"path": "src/demos/鲁豫/luyu_zh.wav",         "gender": "F", "label": "鲁豫"}
+    }
+  },
+  {
+    "source": "f5_tts_demo",
+    "base": "https://raw.githubusercontent.com/SWivid/F5-TTS/main",
+    "dataset": "F5-TTS official demo (SWivid/F5-TTS)",
+    "license": "See F5-TTS repo LICENSE",
+    "default_language": "zh-CN",
+    "files": {
+      "basic_ref_zh": {"path": "src/f5_tts/infer/examples/basic/basic_ref_zh.wav", "gender": "unknown"}
+    }
+  }
+]

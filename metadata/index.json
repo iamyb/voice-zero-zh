@@ -1,8 +1,10 @@
 {
-  "count": 43,
+  "count": 52,
   "sources": [
     "aishell1",
-    "indextts_demo"
+    "f5_tts_demo",
+    "indextts_demo",
+    "spark_tts_demo"
   ],
   "voices": [
     {
@@ -486,6 +488,22 @@
       "file": "voices/aishell1/S0133.wav"
     },
     {
+      "id": "basic_ref_zh",
+      "source": "f5_tts_demo",
+      "gender": "unknown",
+      "language": "zh-CN",
+      "duration_seconds": 6.76,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "F5-TTS official demo (SWivid/F5-TTS)",
+        "url": "https://raw.githubusercontent.com/SWivid/F5-TTS/main/src/f5_tts/infer/examples/basic/basic_ref_zh.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See F5-TTS repo LICENSE",
+      "file": "voices/f5_tts_demo/basic_ref_zh.wav"
+    },
+    {
       "id": "emo_hate",
       "source": "indextts_demo",
       "gender": "unknown",
@@ -692,6 +710,150 @@
       "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
       "license": "See IndexTTS repo LICENSE",
       "file": "voices/indextts_demo/voice_12.wav"
+    },
+    {
+      "id": "dehua_zh",
+      "source": "spark_tts_demo",
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 24.14,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "Spark-TTS official demo (SparkAudio/Spark-TTS)",
+        "url": "https://raw.githubusercontent.com/SparkAudio/Spark-TTS/main/src/demos/%E5%88%98%E5%BE%B7%E5%8D%8E/dehua_zh.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See Spark-TTS repo LICENSE",
+      "label": "刘德华",
+      "note": "Official zero-shot TTS demos. Several are celebrity voices (马云/刘德华/杨澜/鲁豫) — review voice-rights before redistribution.",
+      "file": "voices/spark_tts_demo/dehua_zh.wav"
+    },
+    {
+      "id": "lijing_zh",
+      "source": "spark_tts_demo",
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 18.9,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "Spark-TTS official demo (SparkAudio/Spark-TTS)",
+        "url": "https://raw.githubusercontent.com/SparkAudio/Spark-TTS/main/src/demos/%E6%9D%8E%E9%9D%96/lijing_zh.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See Spark-TTS repo LICENSE",
+      "label": "李靖",
+      "note": "Official zero-shot TTS demos. Several are celebrity voices (马云/刘德华/杨澜/鲁豫) — review voice-rights before redistribution.",
+      "file": "voices/spark_tts_demo/lijing_zh.wav"
+    },
+    {
+      "id": "luyu_zh",
+      "source": "spark_tts_demo",
+      "gender": "F",
+      "language": "zh-CN",
+      "duration_seconds": 15.98,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "Spark-TTS official demo (SparkAudio/Spark-TTS)",
+        "url": "https://raw.githubusercontent.com/SparkAudio/Spark-TTS/main/src/demos/%E9%B2%81%E8%B1%AB/luyu_zh.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See Spark-TTS repo LICENSE",
+      "label": "鲁豫",
+      "note": "Official zero-shot TTS demos. Several are celebrity voices (马云/刘德华/杨澜/鲁豫) — review voice-rights before redistribution.",
+      "file": "voices/spark_tts_demo/luyu_zh.wav"
+    },
+    {
+      "id": "mayun_zh",
+      "source": "spark_tts_demo",
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 22.46,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "Spark-TTS official demo (SparkAudio/Spark-TTS)",
+        "url": "https://raw.githubusercontent.com/SparkAudio/Spark-TTS/main/src/demos/%E9%A9%AC%E4%BA%91/mayun_zh.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See Spark-TTS repo LICENSE",
+      "label": "马云",
+      "note": "Official zero-shot TTS demos. Several are celebrity voices (马云/刘德华/杨澜/鲁豫) — review voice-rights before redistribution.",
+      "file": "voices/spark_tts_demo/mayun_zh.wav"
+    },
+    {
+      "id": "nezha_zh",
+      "source": "spark_tts_demo",
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 18.64,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "Spark-TTS official demo (SparkAudio/Spark-TTS)",
+        "url": "https://raw.githubusercontent.com/SparkAudio/Spark-TTS/main/src/demos/%E5%93%AA%E5%90%92/nezha_zh.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See Spark-TTS repo LICENSE",
+      "label": "哪吒",
+      "note": "Official zero-shot TTS demos. Several are celebrity voices (马云/刘德华/杨澜/鲁豫) — review voice-rights before redistribution.",
+      "file": "voices/spark_tts_demo/nezha_zh.wav"
+    },
+    {
+      "id": "yanglan_zh",
+      "source": "spark_tts_demo",
+      "gender": "F",
+      "language": "zh-CN",
+      "duration_seconds": 15.94,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "Spark-TTS official demo (SparkAudio/Spark-TTS)",
+        "url": "https://raw.githubusercontent.com/SparkAudio/Spark-TTS/main/src/demos/%E6%9D%A8%E6%BE%9C/yanglan_zh.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See Spark-TTS repo LICENSE",
+      "label": "杨澜",
+      "note": "Official zero-shot TTS demos. Several are celebrity voices (马云/刘德华/杨澜/鲁豫) — review voice-rights before redistribution.",
+      "file": "voices/spark_tts_demo/yanglan_zh.wav"
+    },
+    {
+      "id": "yuchengdong_zh",
+      "source": "spark_tts_demo",
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 15.5,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "Spark-TTS official demo (SparkAudio/Spark-TTS)",
+        "url": "https://raw.githubusercontent.com/SparkAudio/Spark-TTS/main/src/demos/%E4%BD%99%E6%89%BF%E4%B8%9C/yuchengdong_zh.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See Spark-TTS repo LICENSE",
+      "label": "余承东",
+      "note": "Official zero-shot TTS demos. Several are celebrity voices (马云/刘德华/杨澜/鲁豫) — review voice-rights before redistribution.",
+      "file": "voices/spark_tts_demo/yuchengdong_zh.wav"
+    },
+    {
+      "id": "zhisheng_zh",
+      "source": "spark_tts_demo",
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 11.54,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "Spark-TTS official demo (SparkAudio/Spark-TTS)",
+        "url": "https://raw.githubusercontent.com/SparkAudio/Spark-TTS/main/src/demos/%E5%BE%90%E5%BF%97%E8%83%9C/zhisheng_zh.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See Spark-TTS repo LICENSE",
+      "label": "徐志胜",
+      "note": "Official zero-shot TTS demos. Several are celebrity voices (马云/刘德华/杨澜/鲁豫) — review voice-rights before redistribution.",
+      "file": "voices/spark_tts_demo/zhisheng_zh.wav"
     }
   ]
 }
