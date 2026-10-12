@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>voice-zero-zh · 中文 TTS 参考音频试听</title>
+<meta name="description" content="中文 zero-shot TTS 参考音频库在线试听（AISHELL-1 / IndexTTS / Spark-TTS / F5-TTS / CosyVoice）。">
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #171a21;
+    --panel-2: #1e222b;
+    --border: #2a2f3a;
+    --text: #e6e9ef;
+    --muted: #9aa3b2;
+    --accent: #4f8cff;
+    --accent-2: #7c5cff;
+    --male: #3b82f6;
+    --female: #ec4899;
+    --unknown: #6b7280;
+    --warn: #f59e0b;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Hiragino Sans GB", "Microsoft YaHei", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 24px 20px 80px; }
+
+  header.hero {
+    padding: 28px 0 8px;
+  }
+  header.hero h1 {
+    font-size: 30px;
+    margin: 0 0 8px;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  header.hero p.sub {
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+    max-width: 760px;
+  }
+  header.hero .badges { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .badge {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+  .badge b { color: var(--text); font-weight: 600; }
+
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin: 20px 0 8px;
+    padding: 14px;
+    background: rgba(23, 26, 33, 0.92);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+  .toolbar label { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+  select, input[type="search"] {
+    background: var(--panel-2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 8px 10px;
+    font-size: 14px;
+    outline: none;
+  }
+  select:focus, input[type="search"]:focus { border-color: var(--accent); }
+  input[type="search"] { min-width: 200px; flex: 1; }
+  .toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .toggle input { accent-color: var(--warn); width: 16px; height: 16px; }
+  .count { margin-left: auto; font-size: 13px; color: var(--muted); }
+  .count b { color: var(--text); }
+
+  .celeb-note {
+    display: none;
+    margin: 10px 2px 0;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: #fde68a;
+    background: rgba(245, 158, 11, 0.10);
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    border-radius: 10px;
+  }
+  .celeb-note.show { display: block; }
+
+  .group { margin-top: 26px; }
+  .group > h2 {
+    font-size: 16px;
+    margin: 0 0 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .group > h2 .gcount { font-size: 12px; color: var(--muted); font-weight: 400; }
+  .group > p.gdesc { margin: 0 0 14px; font-size: 13px; color: var(--muted); }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+  }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: border-color .15s ease, transform .15s ease;
+  }
+  .card:hover { border-color: #3a4150; transform: translateY(-2px); }
+  .card.celeb { border-color: rgba(245, 158, 11, 0.4); }
+  .card-top { display: flex; align-items: baseline; gap: 8px; }
+  .card-top .id { font-weight: 600; font-size: 15px; }
+  .card-top .label { color: var(--accent); font-size: 14px; font-weight: 600; }
+  .card-top .label.celeb { color: var(--warn); }
+  .gender {
+    margin-left: auto;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+  }
+  .gender.M { color: var(--male); border-color: rgba(59,130,246,.4); background: rgba(59,130,246,.10); }
+  .gender.F { color: var(--female); border-color: rgba(236,72,153,.4); background: rgba(236,72,153,.10); }
+  .gender.unknown, .gender.U { color: var(--unknown); border-color: var(--border); background: var(--panel-2); }
+
+  audio { width: 100%; height: 36px; }
+  audio::-webkit-media-controls-panel { background: var(--panel-2); }
+
+  .card-foot {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .card-foot .k { color: #6b7280; }
+  .card-foot .lic { margin-left: auto; }
+
+  .empty {
+    text-align: center;
+    color: var(--muted);
+    padding: 60px 0;
+    font-size: 15px;
+  }
+  .loading { text-align: center; color: var(--muted); padding: 60px 0; }
+  .spinner {
+    width: 28px; height: 28px; margin: 0 auto 12px;
+    border: 3px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin .8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  footer.foot {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 13px;
+  }
+  footer.foot p { margin: 4px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <h1>voice-zero-zh</h1>
+    <p class="sub">
+      中文 zero-shot TTS 参考音频库在线试听。为 IndexTTS / CosyVoice / GPT-SoVITS 等模型提供
+      干净、标准化、可溯源的中文参考音频（统一响度、16 kHz 单声道）。点击卡片即可试听。
+    </p>
+    <div class="badges" id="badges"></div>
+  </header>
+
+  <div class="toolbar">
+    <label>来源
+      <select id="f-source"><option value="">全部</option></select>
+    </label>
+    <label>性别
+      <select id="f-gender">
+        <option value="">全部</option>
+        <option value="M">男</option>
+        <option value="F">女</option>
+        <option value="unknown">未知</option>
+      </select>
+    </label>
+    <input type="search" id="f-search" placeholder="搜索 id / 名称 / 来源…">
+    <label class="toggle">
+      <input type="checkbox" id="f-celeb">
+      显示名人音色
+    </label>
+    <span class="count" id="count"></span>
+  </div>
+
+  <div class="celeb-note" id="celeb-note">
+    ⚠️ 以下包含真实人物（名人）声音的官方 demo，仅供技术评估，公开分发前请自行评估声音权益。
+  </div>
+
+  <div id="content"><div class="loading"><div class="spinner"></div>正在加载 metadata/index.json …</div></div>
+
+  <footer class="foot">
+    <p>数据源：<a href="https://www.openslr.org/33/">AISHELL-1</a>（Apache-2.0）及各 TTS 项目官方 demo。</p>
+    <p>仓库：<a href="https://github.com/iamyb/voice-zero-zh" target="_blank" rel="noopener">github.com/iamyb/voice-zero-zh</a> · 音频可直接下载作为参考音频使用。</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // 名人音色（真实人物声音）——默认隐藏，勾选“显示名人音色”后展开。
+  var CELEB_IDS = {
+    "dehua_zh": 1, // 刘德华
+    "mayun_zh": 1, // 马云
+    "yanglan_zh": 1, // 杨澜
+    "luyu_zh": 1   // 鲁豫
+  };
+
+  var SOURCE_META = {
+    aishell1:       { name: "AISHELL-1",        desc: "录音棚级普通话朗读，Apache-2.0，16 kHz 单声道。" },
+    indextts_demo:  { name: "IndexTTS demo",    desc: "IndexTTS 官方 demo 片段。" },
+    spark_tts_demo: { name: "Spark-TTS demo",   desc: "Spark-TTS 官方 demo（含名人/角色音色）。" },
+    f5_tts_demo:    { name: "F5-TTS demo",      desc: "F5-TTS 官方中文参考。" },
+    cosyvoice_demo: { name: "CosyVoice demo",   desc: "CosyVoice 官方 demo。" }
+  };
+
+  var GENDER_LABEL = { M: "男", F: "女", unknown: "未知", U: "未知" };
+
+  var state = { source: "", gender: "", search: "", celeb: false };
+  var voices = [];
+
+  var elContent = document.getElementById("content");
+  var elCount = document.getElementById("count");
+  var elBadges = document.getElementById("badges");
+  var elCelebNote = document.getElementById("celeb-note");
+  var elSourceSel = document.getElementById("f-source");
+
+  function esc(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+
+  function isCeleb(v) { return !!CELEB_IDS[v.id]; }
+
+  function matches(v) {
+    if (state.source && v.source !== state.source) return false;
+    if (state.gender) {
+      var g = (v.gender || "unknown");
+      if (state.gender === "unknown" ? g !== "unknown" : g !== state.gender) return false;
+    }
+    if (state.search) {
+      var q = state.search.toLowerCase();
+      var hay = (v.id + " " + (v.label || "") + " " + (v.source || "") + " " +
+                 (SOURCE_META[v.source] ? SOURCE_META[v.source].name : "")).toLowerCase();
+      if (hay.indexOf(q) === -1) return false;
+    }
+    if (!state.celeb && isCeleb(v)) return false;
+    return true;
+  }
+
+  function cardHTML(v) {
+    var celeb = isCeleb(v);
+    var g = v.gender || "unknown";
+    var label = v.label ? '<span class="label' + (celeb ? " celeb" : "") + '">' + esc(v.label) + "</span>" : "";
+    var lic = v.license ? '<span class="lic"><span class="k">许可</span> ' + esc(v.license) + "</span>" : "";
+    return (
+      '<div class="card' + (celeb ? " celeb" : "") + '">' +
+        '<div class="card-top">' +
+          '<span class="id">' + esc(v.id) + "</span>" + label +
+          '<span class="gender ' + esc(g) + '">' + esc(GENDER_LABEL[g] || g) + "</span>" +
+        "</div>" +
+        '<audio controls preload="none" src="' + esc(v.file) + '"></audio>' +
+        '<div class="card-foot">' +
+          '<span><span class="k">时长</span> ' + (v.duration_seconds != null ? v.duration_seconds + "s" : "—") + "</span>" +
+          '<span><span class="k">采样率</span> ' + (v.sample_rate ? (v.sample_rate / 1000) + "k" : "—") + "</span>" +
+          lic +
+        "</div>" +
+      "</div>"
+    );
+  }
+
+  function render() {
+    var filtered = voices.filter(matches);
+
+    // 按来源分组，保持 index.json 中来源出现顺序
+    var groups = [];
+    var bySource = {};
+    filtered.forEach(function (v) {
+      if (!bySource[v.source]) { bySource[v.source] = []; groups.push(v.source); }
+      bySource[v.source].push(v);
+    });
+
+    if (!filtered.length) {
+      elContent.innerHTML = '<div class="empty">没有匹配的样本，试试调整筛选条件。</div>';
+    } else {
+      var html = "";
+      groups.forEach(function (src) {
+        var meta = SOURCE_META[src] || { name: src, desc: "" };
+        html += '<section class="group">' +
+          "<h2>" + esc(meta.name) +
+          ' <span class="gcount">' + bySource[src].length + " 个</span></h2>" +
+          (meta.desc ? '<p class="gdesc">' + esc(meta.desc) + "</p>" : "") +
+          '<div class="grid">' + bySource[src].map(cardHTML).join("") + "</div>" +
+        "</section>";
+      });
+      elContent.innerHTML = html;
+    }
+
+    elCount.innerHTML = "显示 <b>" + filtered.length + "</b> / " + voices.length + " 个样本";
+    elCelebNote.classList.toggle("show", state.celeb);
+  }
+
+  function buildSourceFilter() {
+    var seen = {};
+    voices.forEach(function (v) { seen[v.source] = 1; });
+    Object.keys(seen).forEach(function (src) {
+      var meta = SOURCE_META[src] || { name: src };
+      var opt = document.createElement("option");
+      opt.value = src;
+      opt.textContent = meta.name;
+      elSourceSel.appendChild(opt);
+    });
+  }
+
+  function buildBadges() {
+    var bySource = {};
+    voices.forEach(function (v) { bySource[v.source] = (bySource[v.source] || 0) + 1; });
+    var html = "";
+    Object.keys(bySource).forEach(function (src) {
+      var meta = SOURCE_META[src] || { name: src };
+      html += '<span class="badge">' + esc(meta.name) + " <b>" + bySource[src] + "</b></span>";
+    });
+    html += '<span class="badge">合计 <b>' + voices.length + "</b></span>";
+    elBadges.innerHTML = html;
+  }
+
+  function init() {
+    elSourceSel.addEventListener("change", function () { state.source = this.value; render(); });
+    document.getElementById("f-gender").addEventListener("change", function () { state.gender = this.value; render(); });
+    document.getElementById("f-search").addEventListener("input", function () { state.search = this.value.trim(); render(); });
+    document.getElementById("f-celeb").addEventListener("change", function () { state.celeb = this.checked; render(); });
+
+    fetch("metadata/index.json", { cache: "no-cache" })
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function (data) {
+        voices = data.voices || [];
+        buildSourceFilter();
+        buildBadges();
+        render();
+      })
+      .catch(function (err) {
+        elContent.innerHTML = '<div class="empty">加载失败：' + esc(err.message) +
+          "<br>请确认通过 GitHub Pages（或任意静态服务器）访问，而非直接以 file:// 打开。</div>";
+      });
+  }
+
+  init();
+})();
+</script>
+</body>
+</html>
