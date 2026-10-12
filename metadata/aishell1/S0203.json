@@ -1,0 +1,15 @@
+{
+  "id": "S0203",
+  "source": "aishell1",
+  "gender": "F",
+  "language": "zh-CN",
+  "duration_seconds": 6.98,
+  "sample_rate": 16000,
+  "origin": {
+    "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+    "file": "data_aishell/wav/train/S0203/",
+    "utterance": "BAC009S0203W0160.wav"
+  },
+  "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+  "license": "Apache-2.0"
+}

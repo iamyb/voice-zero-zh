@@ -226,6 +226,8 @@ def main():
     ap.add_argument("--all-missing", action="store_true",
                     help="build every speaker in speaker.info that is not yet in voices/")
     ap.add_argument("--reindex", action="store_true", help="only rebuild index.json")
+    ap.add_argument("--no-reindex", action="store_true",
+                    help="skip the final index rebuild (for parallel runs; reindex once at the end)")
     args = ap.parse_args()
 
     os.makedirs(VOICES_DIR, exist_ok=True)
@@ -253,10 +255,11 @@ def main():
             failed.append(speaker)
             print(f"[fail] {speaker}: {e}")
 
-    # Rebuild the global index
-    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-    from reindex import reindex
-    reindex()
+    # Rebuild the global index (skipped in parallel runs)
+    if not args.no_reindex:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from reindex import reindex
+        reindex()
     print(f"\n{ok} built, {len(failed)} failed {failed if failed else ''}")
 
 
