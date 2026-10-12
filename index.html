@@ -172,6 +172,20 @@
   }
   .card-foot .k { color: #6b7280; }
   .card-foot .lic { margin-left: auto; }
+  .copy-url {
+    cursor: pointer;
+    background: var(--panel-2);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 1px 8px;
+    font-size: 11px;
+    line-height: 1.6;
+    white-space: nowrap;
+    transition: color .15s ease, border-color .15s ease;
+  }
+  .copy-url:hover { color: var(--text); border-color: var(--accent); }
+  .copy-url.copied { color: #34d399; border-color: #34d399; }
 
   .empty {
     text-align: center;
@@ -312,6 +326,7 @@
         '<div class="card-foot">' +
           '<span><span class="k">时长</span> ' + (v.duration_seconds != null ? v.duration_seconds + "s" : "—") + "</span>" +
           '<span><span class="k">采样率</span> ' + (v.sample_rate ? (v.sample_rate / 1000) + "k" : "—") + "</span>" +
+          '<button class="copy-url" type="button" data-url="' + esc(v.file) + '" title="复制音频 URL">🔗 复制 URL</button>' +
           lic +
         "</div>" +
       "</div>"
@@ -373,11 +388,42 @@
     elBadges.innerHTML = html;
   }
 
+  function copyUrl(btn) {
+    var rel = btn.getAttribute("data-url");
+    var abs = new URL(rel, window.location.href).href;
+    function done() {
+      var old = btn.textContent;
+      btn.textContent = "✓ 已复制";
+      btn.classList.add("copied");
+      setTimeout(function () { btn.textContent = old; btn.classList.remove("copied"); }, 1500);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(abs).then(done).catch(function () { fallbackCopy(abs, done); });
+    } else {
+      fallbackCopy(abs, done);
+    }
+  }
+
+  function fallbackCopy(text, cb) {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); cb(); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+
   function init() {
     elSourceSel.addEventListener("change", function () { state.source = this.value; render(); });
     document.getElementById("f-gender").addEventListener("change", function () { state.gender = this.value; render(); });
     document.getElementById("f-search").addEventListener("input", function () { state.search = this.value.trim(); render(); });
     document.getElementById("f-celeb").addEventListener("change", function () { state.celeb = this.checked; render(); });
+    elContent.addEventListener("click", function (e) {
+      var btn = e.target.closest(".copy-url");
+      if (btn) copyUrl(btn);
+    });
 
     fetch("metadata/index.json", { cache: "no-cache" })
       .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
