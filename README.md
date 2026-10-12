@@ -10,19 +10,21 @@
 
 | 来源 | 数量 | 说明 |
 |---|---|---|
-| **aishell1** | 30 | AISHELL-1（20 男 S0002–S0021 + 10 女 S0124–S0133），录音棚级，Apache-2.0 |
+| **aishell1** | 340 | AISHELL-1（161 男 + 179 女），录音棚级，Apache-2.0 |
 | **indextts_demo** | 13 | IndexTTS 官方 demo 片段 |
 | **spark_tts_demo** | 8 | Spark-TTS 官方 demo（含名人/角色音色） |
+| **cosyvoice_demo** | 2 | CosyVoice 官方 zero-shot / cross-lingual prompt |
 | **f5_tts_demo** | 1 | F5-TTS 官方中文参考 |
 
-- 完整 AISHELL-1 数据集共 119 位说话人，可用 `--all-missing` 一键补齐。
+- 共 **364 个样本**。AISHELL-1 的 `speaker.info` 列有 400 位说话人，但公开镜像只覆盖 340 位（S0002–S0723），已全部补齐；其余 60 位（S0724–S0916）在任何公开镜像中都不存在。
 - ⚠️ 部分 demo（尤其 Spark-TTS 的名人音色）涉及真实人物声音，公开分发前请自行评估声音权益。
 
 ## 数据源
 
-- **AISHELL-1**：119 位说话人、5.8 小时录音棚级普通话朗读音频，Apache-2.0 许可。
-- 音频下载自 HuggingFace 镜像 [`AISHELL/AISHELL-1`](https://huggingface.co/datasets/AISHELL/AISHELL-1)（按说话人打包的 tar.gz，仅含 S0002–S0101）；不在该镜像中的说话人自动回退到 [`shenyunhang/AISHELL-1`](https://huggingface.co/datasets/shenyunhang/AISHELL-1)（逐文件存放，覆盖全部 119 位说话人）。
+- **AISHELL-1**：`speaker.info` 列有 400 位说话人（214 女 / 186 男），录音棚级普通话朗读音频，Apache-2.0 许可。
+- 音频下载自 HuggingFace 镜像 [`AISHELL/AISHELL-1`](https://huggingface.co/datasets/AISHELL/AISHELL-1)（按说话人打包的 tar.gz，仅含 S0002–S0101）；不在该镜像中的说话人自动回退到 [`shenyunhang/AISHELL-1`](https://huggingface.co/datasets/shenyunhang/AISHELL-1)（逐文件存放，覆盖 S0002–S0723 共 340 位）。
 - 说话人信息（性别）来自官方 `speaker.info`（[openslr.org/33](https://www.openslr.org/33/)）。
+- 大规模补齐用 `bash scripts/fill_parallel.sh 8`（8 路并行，约 40 分钟补完 340 位）。
 
 ## 清洗流程
 
@@ -53,6 +55,7 @@ metadata/
     <id>.json      # 单个样本的溯源信息
 scripts/
   build_voices.py        # AISHELL-1 构建脚本（下载 → 挑选 → 清洗 → 元数据）
+  fill_parallel.sh       # 并行补齐缺失说话人（N 路并发，最后统一 reindex）
   fetch_demos.py         # 通用 TTS demo 抓取（由 demo_sources.json 驱动）
   demo_sources.json      # demo 来源清单（加新来源只改这里）
   fetch_indextts_demo.py # IndexTTS demo 抓取（早期专用脚本）
