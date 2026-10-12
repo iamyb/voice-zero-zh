@@ -1,0 +1,697 @@
+{
+  "count": 43,
+  "sources": [
+    "aishell1",
+    "indextts_demo"
+  ],
+  "voices": [
+    {
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 6.0,
+      "sample_rate": 16000,
+      "processing": "trimmed to 8s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0002",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/S0002.tar.gz",
+        "utterance": "train/S0002/BAC009S0002W0122.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0002.wav"
+    },
+    {
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 7.6,
+      "sample_rate": 16000,
+      "processing": "trimmed to 8s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0003",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/S0003.tar.gz",
+        "utterance": "train/S0003/BAC009S0003W0121.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0003.wav"
+    },
+    {
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 5.07,
+      "sample_rate": 16000,
+      "processing": "trimmed to 8s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0004",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/S0004.tar.gz",
+        "utterance": "train/S0004/BAC009S0004W0138.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0004.wav"
+    },
+    {
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 5.75,
+      "sample_rate": 16000,
+      "processing": "trimmed to 8s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0005",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/S0005.tar.gz",
+        "utterance": "train/S0005/BAC009S0005W0130.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0005.wav"
+    },
+    {
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 6.97,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0006",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/S0006.tar.gz",
+        "utterance": "train/S0006/BAC009S0006W0341.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0006.wav"
+    },
+    {
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 7.0,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0007",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/S0007.tar.gz",
+        "utterance": "train/S0007/BAC009S0007W0249.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0007.wav"
+    },
+    {
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 6.96,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0008",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/S0008.tar.gz",
+        "utterance": "train/S0008/BAC009S0008W0389.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0008.wav"
+    },
+    {
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 7.0,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0009",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/S0009.tar.gz",
+        "utterance": "train/S0009/BAC009S0009W0489.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0009.wav"
+    },
+    {
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 6.88,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0010",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/S0010.tar.gz",
+        "utterance": "train/S0010/BAC009S0010W0400.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0010.wav"
+    },
+    {
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 6.9,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0011",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/S0011.tar.gz",
+        "utterance": "train/S0011/BAC009S0011W0184.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0011.wav"
+    },
+    {
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 7.0,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0012",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/S0012.tar.gz",
+        "utterance": "train/S0012/BAC009S0012W0488.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0012.wav"
+    },
+    {
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 7.0,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0013",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/S0013.tar.gz",
+        "utterance": "train/S0013/BAC009S0013W0431.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0013.wav"
+    },
+    {
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 7.0,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0014",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/S0014.tar.gz",
+        "utterance": "train/S0014/BAC009S0014W0394.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0014.wav"
+    },
+    {
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 7.0,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0015",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/S0015.tar.gz",
+        "utterance": "train/S0015/BAC009S0015W0166.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0015.wav"
+    },
+    {
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 7.0,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0016",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/S0016.tar.gz",
+        "utterance": "train/S0016/BAC009S0016W0310.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0016.wav"
+    },
+    {
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 6.91,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0017",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/S0017.tar.gz",
+        "utterance": "train/S0017/BAC009S0017W0364.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0017.wav"
+    },
+    {
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 7.0,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0018",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/S0018.tar.gz",
+        "utterance": "train/S0018/BAC009S0018W0267.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0018.wav"
+    },
+    {
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 7.0,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0019",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/S0019.tar.gz",
+        "utterance": "train/S0019/BAC009S0019W0373.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0019.wav"
+    },
+    {
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 7.0,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0020",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/S0020.tar.gz",
+        "utterance": "train/S0020/BAC009S0020W0448.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0020.wav"
+    },
+    {
+      "gender": "M",
+      "language": "zh-CN",
+      "duration_seconds": 6.89,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0021",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/S0021.tar.gz",
+        "utterance": "train/S0021/BAC009S0021W0476.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0021.wav"
+    },
+    {
+      "gender": "F",
+      "language": "zh-CN",
+      "duration_seconds": 7.0,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0124",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/train/S0124/",
+        "utterance": "BAC009S0124W0141.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0124.wav"
+    },
+    {
+      "gender": "F",
+      "language": "zh-CN",
+      "duration_seconds": 6.88,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0125",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/train/S0125/",
+        "utterance": "BAC009S0125W0145.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0125.wav"
+    },
+    {
+      "gender": "F",
+      "language": "zh-CN",
+      "duration_seconds": 6.85,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0126",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/train/S0126/",
+        "utterance": "BAC009S0126W0141.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0126.wav"
+    },
+    {
+      "gender": "F",
+      "language": "zh-CN",
+      "duration_seconds": 5.41,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0127",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/train/S0127/",
+        "utterance": "BAC009S0127W0176.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0127.wav"
+    },
+    {
+      "gender": "F",
+      "language": "zh-CN",
+      "duration_seconds": 6.91,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0128",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/train/S0128/",
+        "utterance": "BAC009S0128W0137.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0128.wav"
+    },
+    {
+      "gender": "F",
+      "language": "zh-CN",
+      "duration_seconds": 6.3,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0129",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/train/S0129/",
+        "utterance": "BAC009S0129W0139.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0129.wav"
+    },
+    {
+      "gender": "F",
+      "language": "zh-CN",
+      "duration_seconds": 6.82,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0130",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/train/S0130/",
+        "utterance": "BAC009S0130W0154.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0130.wav"
+    },
+    {
+      "gender": "F",
+      "language": "zh-CN",
+      "duration_seconds": 6.8,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0131",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/train/S0131/",
+        "utterance": "BAC009S0131W0158.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0131.wav"
+    },
+    {
+      "gender": "F",
+      "language": "zh-CN",
+      "duration_seconds": 7.0,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0132",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/train/S0132/",
+        "utterance": "BAC009S0132W0127.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0132.wav"
+    },
+    {
+      "gender": "F",
+      "language": "zh-CN",
+      "duration_seconds": 6.72,
+      "sample_rate": 16000,
+      "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "Apache-2.0",
+      "id": "S0133",
+      "origin": {
+        "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+        "file": "data_aishell/wav/train/S0133/",
+        "utterance": "BAC009S0133W0135.wav"
+      },
+      "source": "aishell1",
+      "file": "voices/aishell1/S0133.wav"
+    },
+    {
+      "id": "emo_hate",
+      "source": "indextts_demo",
+      "gender": "unknown",
+      "language": "zh-CN",
+      "duration_seconds": 0.47,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "IndexTTS official demo",
+        "url": "https://github.com/index-tts/index-tts/blob/main/examples/emo_hate.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See IndexTTS repo LICENSE",
+      "file": "voices/indextts_demo/emo_hate.wav"
+    },
+    {
+      "id": "emo_sad",
+      "source": "indextts_demo",
+      "gender": "unknown",
+      "language": "zh-CN",
+      "duration_seconds": 2.89,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "IndexTTS official demo",
+        "url": "https://github.com/index-tts/index-tts/blob/main/examples/emo_sad.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See IndexTTS repo LICENSE",
+      "file": "voices/indextts_demo/emo_sad.wav"
+    },
+    {
+      "id": "voice_01",
+      "source": "indextts_demo",
+      "gender": "unknown",
+      "language": "zh-CN",
+      "duration_seconds": 2.44,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "IndexTTS official demo",
+        "url": "https://github.com/index-tts/index-tts/blob/main/examples/voice_01.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See IndexTTS repo LICENSE",
+      "file": "voices/indextts_demo/voice_01.wav"
+    },
+    {
+      "id": "voice_02",
+      "source": "indextts_demo",
+      "gender": "unknown",
+      "language": "zh-CN",
+      "duration_seconds": 2.93,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "IndexTTS official demo",
+        "url": "https://github.com/index-tts/index-tts/blob/main/examples/voice_02.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See IndexTTS repo LICENSE",
+      "file": "voices/indextts_demo/voice_02.wav"
+    },
+    {
+      "id": "voice_03",
+      "source": "indextts_demo",
+      "gender": "unknown",
+      "language": "zh-CN",
+      "duration_seconds": 2.11,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "IndexTTS official demo",
+        "url": "https://github.com/index-tts/index-tts/blob/main/examples/voice_03.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See IndexTTS repo LICENSE",
+      "file": "voices/indextts_demo/voice_03.wav"
+    },
+    {
+      "id": "voice_04",
+      "source": "indextts_demo",
+      "gender": "unknown",
+      "language": "zh-CN",
+      "duration_seconds": 2.35,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "IndexTTS official demo",
+        "url": "https://github.com/index-tts/index-tts/blob/main/examples/voice_04.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See IndexTTS repo LICENSE",
+      "file": "voices/indextts_demo/voice_04.wav"
+    },
+    {
+      "id": "voice_05",
+      "source": "indextts_demo",
+      "gender": "unknown",
+      "language": "zh-CN",
+      "duration_seconds": 8.41,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "IndexTTS official demo",
+        "url": "https://github.com/index-tts/index-tts/blob/main/examples/voice_05.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See IndexTTS repo LICENSE",
+      "file": "voices/indextts_demo/voice_05.wav"
+    },
+    {
+      "id": "voice_06",
+      "source": "indextts_demo",
+      "gender": "unknown",
+      "language": "zh-CN",
+      "duration_seconds": 6.23,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "IndexTTS official demo",
+        "url": "https://github.com/index-tts/index-tts/blob/main/examples/voice_06.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See IndexTTS repo LICENSE",
+      "file": "voices/indextts_demo/voice_06.wav"
+    },
+    {
+      "id": "voice_07",
+      "source": "indextts_demo",
+      "gender": "unknown",
+      "language": "zh-CN",
+      "duration_seconds": 2.04,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "IndexTTS official demo",
+        "url": "https://github.com/index-tts/index-tts/blob/main/examples/voice_07.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See IndexTTS repo LICENSE",
+      "file": "voices/indextts_demo/voice_07.wav"
+    },
+    {
+      "id": "voice_08",
+      "source": "indextts_demo",
+      "gender": "unknown",
+      "language": "zh-CN",
+      "duration_seconds": 1.45,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "IndexTTS official demo",
+        "url": "https://github.com/index-tts/index-tts/blob/main/examples/voice_08.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See IndexTTS repo LICENSE",
+      "file": "voices/indextts_demo/voice_08.wav"
+    },
+    {
+      "id": "voice_09",
+      "source": "indextts_demo",
+      "gender": "unknown",
+      "language": "zh-CN",
+      "duration_seconds": 10.19,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "IndexTTS official demo",
+        "url": "https://github.com/index-tts/index-tts/blob/main/examples/voice_09.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See IndexTTS repo LICENSE",
+      "file": "voices/indextts_demo/voice_09.wav"
+    },
+    {
+      "id": "voice_11",
+      "source": "indextts_demo",
+      "gender": "unknown",
+      "language": "zh-CN",
+      "duration_seconds": 7.86,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "IndexTTS official demo",
+        "url": "https://github.com/index-tts/index-tts/blob/main/examples/voice_11.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See IndexTTS repo LICENSE",
+      "file": "voices/indextts_demo/voice_11.wav"
+    },
+    {
+      "id": "voice_12",
+      "source": "indextts_demo",
+      "gender": "unknown",
+      "language": "zh-CN",
+      "duration_seconds": 2.67,
+      "sample_rate": 16000,
+      "origin": {
+        "dataset": "IndexTTS official demo",
+        "url": "https://github.com/index-tts/index-tts/blob/main/examples/voice_12.wav",
+        "fetched_at": "2026-10-12"
+      },
+      "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+      "license": "See IndexTTS repo LICENSE",
+      "file": "voices/indextts_demo/voice_12.wav"
+    }
+  ]
+}

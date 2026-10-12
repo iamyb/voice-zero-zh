@@ -1,0 +1,15 @@
+{
+  "gender": "M",
+  "language": "zh-CN",
+  "duration_seconds": 6.88,
+  "sample_rate": 16000,
+  "processing": "trimmed to 7s, loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+  "license": "Apache-2.0",
+  "id": "S0010",
+  "origin": {
+    "dataset": "AISHELL-1 (openslr.org/resources/33, HuggingFace: AISHELL/AISHELL-1)",
+    "file": "data_aishell/wav/S0010.tar.gz",
+    "utterance": "train/S0010/BAC009S0010W0400.wav"
+  },
+  "source": "aishell1"
+}
