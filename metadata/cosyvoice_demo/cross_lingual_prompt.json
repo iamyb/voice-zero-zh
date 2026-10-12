@@ -1,0 +1,15 @@
+{
+  "id": "cross_lingual_prompt",
+  "source": "cosyvoice_demo",
+  "gender": "unknown",
+  "language": "zh-CN",
+  "duration_seconds": 13.75,
+  "sample_rate": 16000,
+  "origin": {
+    "dataset": "CosyVoice official demo (QwenAudio/CosyVoice)",
+    "url": "https://raw.githubusercontent.com/QwenAudio/CosyVoice/main/asset/cross_lingual_prompt.wav",
+    "fetched_at": "2026-10-12"
+  },
+  "processing": "loudnorm I=-8 LUFS TP=-2 dB, 16 kHz mono (ffmpeg)",
+  "license": "See CosyVoice repo LICENSE"
+}

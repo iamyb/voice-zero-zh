@@ -26,5 +26,16 @@
     "files": {
       "basic_ref_zh": {"path": "src/f5_tts/infer/examples/basic/basic_ref_zh.wav", "gender": "unknown"}
     }
+  },
+  {
+    "source": "cosyvoice_demo",
+    "base": "https://raw.githubusercontent.com/QwenAudio/CosyVoice/main",
+    "dataset": "CosyVoice official demo (QwenAudio/CosyVoice)",
+    "license": "See CosyVoice repo LICENSE",
+    "default_language": "zh-CN",
+    "files": {
+      "zero_shot_prompt":    {"path": "asset/zero_shot_prompt.wav",    "gender": "unknown"},
+      "cross_lingual_prompt": {"path": "asset/cross_lingual_prompt.wav", "gender": "unknown"}
+    }
   }
 ]
